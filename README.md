@@ -1,0 +1,107 @@
+# Prompt 提示词库
+
+整理自 [sqlyouran/first](https://github.com/sqlyouran/first) 的 `openspec/prompt` 目录，是一套完整的 **Spec-Driven Development（规格驱动开发）** 实践提示词集合。
+
+按软件工程生命周期分为 8 个阶段目录，文件名 `编号-总结.md` 保留原始顺序（对应源仓库章节顺序 ch4 → ch16）。
+
+## 目录结构
+
+### 00-foundation 工程基建与规范
+> 先立规矩，再写代码。项目脚手架、技术规范、规则沉淀。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [1-初始化AI编程项目目录](00-foundation/1-初始化AI编程项目目录.md) | 基于 openspec + superpowers 理念初始化 AI 编程项目 | 脚手架 |
+| [2-搭建SpringBoot前后端开发框架](00-foundation/2-搭建SpringBoot前后端开发框架.md) | Spring Boot + Maven 前后端开发框架搭建 | 脚手架 |
+| [6-数据库设计规范与FlywayMigration](00-foundation/6-数据库设计规范与FlywayMigration.md) | 主键策略/公共字段/索引规范 + Migration 管理规则 | 规则沉淀 |
+| [14-项目集成OpenAPI](00-foundation/14-项目集成OpenAPI.md) | 项目集成 OpenAPI | 集成 |
+| [15-抽取项目规约规则与BaseEntity](00-foundation/15-抽取项目规约规则与BaseEntity.md) | 从隐含代码模式抽取 conventions 规则文件 + BaseEntity | ⭐ 规则沉淀 |
+
+### 10-product 调研与产品定义
+> 先做正确的事。市场调研、需求分析、产品流水线。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [7-旅游平台调研验证与MVP模块规划](10-product/7-旅游平台调研验证与MVP模块规划.md) | 四维调研报告 + GO/NO-GO 判断 + MVP 模块优先级 | 调研 |
+| [20-景点模块需求分析](10-product/20-景点模块需求分析.md) | 景点模块字段/页面/开发顺序分析 | 需求分析 |
+| [24-用户模块产品交互与变更生成](10-product/24-用户模块产品交互与变更生成.md) | 产品 → 交互 → Spec 变更的多角色协作 | ⭐ 多角色编排 |
+
+### 20-spec Spec 编写与评审
+> SDD 核心闭环：编写 → 评审 → 迭代。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [3-生成Todo模块Spec文档](20-spec/3-生成Todo模块Spec文档.md) | Spec 四要素：边界/WHEN-THEN/数据结构/验收标准 | ⭐ Spec四要素 |
+| [4-审查Spec文档](20-spec/4-审查Spec文档.md) | 安全/数据/逻辑/异常/验收五维 Spec 评审 | 评审 |
+| [8-首页拆分Spec单元与生成HeroSpec](20-spec/8-首页拆分Spec单元与生成HeroSpec.md) | 页面拆分为独立可交付 Spec 单元 | 拆分 |
+| [11-auth模块Spec安全边界与状态机](20-spec/11-auth模块Spec安全边界与状态机.md) | 显式安全边界 + 用户状态机约束 | ⭐ Spec四要素 |
+| [12-Auth后端API设计探索](20-spec/12-Auth后端API设计探索.md) | API 设计讨论式探索，产出 spec.md 草案 | 探索 |
+| [27-重新设计首页并产出变更](20-spec/27-重新设计首页并产出变更.md) | 基于设计稿反推 openspec change | 设计驱动 |
+
+### 30-implementation Spec → 代码实现
+> 按 Spec 实现、前后端联通、技术改造、外部集成。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [13-SDD范式联通auth前后端](30-implementation/13-SDD范式联通auth前后端.md) | auth 页面与后端服务联通 | 联通 |
+| [16-帖子模块Spec与前后端实现](30-implementation/16-帖子模块Spec与前后端实现.md) | spec → 后端 CRUD → 前端页面三段式实现 | 三段式 |
+| [17-数据库从H2切换到MySQL](30-implementation/17-数据库从H2切换到MySQL.md) | 数据库迁移改造 | 技术改造 |
+| [18-帖子详情页评论投票收藏](30-implementation/18-帖子详情页评论投票收藏.md) | 评论/投票/收藏：唯一约束 + 乐观更新 | 实现 |
+| [19-帖子列表互动统计与分页排序](30-implementation/19-帖子列表互动统计与分页排序.md) | 聚合统计 + cursor 分页 + 排序切换 | 实现 |
+| [21-城市与景点模块后端及页面开发](30-implementation/21-城市与景点模块后端及页面开发.md) | 城市/景点后端 + 列表/详情页 | 实现 |
+| [22-景点排行榜Redis缓存提速](30-implementation/22-景点排行榜Redis缓存提速.md) | Redis 缓存层设计与失效策略 | 技术改造 |
+| [25-旅行服务接入MCP外部API](30-implementation/25-旅行服务接入MCP外部API.md) | MCP Server 接入汇率/天气外部 API | 集成 |
+| [42-首页导航填坑与一键部署](30-implementation/42-首页导航填坑与一键部署.md) | 先核实再接线，防 AI 幻觉 | ⭐ 防幻觉核实 |
+
+### 40-quality 质量保障
+> 测试设计、回归修复、一致性审计，以及「只诊断不改代码」类提示词。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [9-对照Spec检查代码覆盖度](40-quality/9-对照Spec检查代码覆盖度.md) | 代码对照 WHEN/THEN 逐条审计 | ⭐ 只诊断 |
+| [10-基于Spec生成PlaywrightE2E测试](40-quality/10-基于Spec生成PlaywrightE2E测试.md) | Spec 场景 → E2E 测试用例 | 测试设计 |
+| [23-景点模块全量测试回归与修复](40-quality/23-景点模块全量测试回归与修复.md) | 回归 → 根因分析 → 逐个修复 → 全绿 | ⭐ 分步修复 |
+| [35-Service层测试覆盖诊断](40-quality/35-Service层测试覆盖诊断.md) | 测试覆盖缺口诊断 + 补测优先级 | ⭐ 只诊断 |
+| [36-JwtService单元测试设计](40-quality/36-JwtService单元测试设计.md) | 先读源码列用例清单，不写代码 | 测试设计 |
+| [37-性能瓶颈诊断与前后端安全体检](40-quality/37-性能瓶颈诊断与前后端安全体检.md) | 性能诊断 + 前后端安全体检，按严重度排序 | ⭐ 只诊断 |
+| [38-规约对账与覆盖率门禁方案](40-quality/38-规约对账与覆盖率门禁方案.md) | 规约与代码对账 + JaCoCo 覆盖率门禁方案 | ⭐ 规则沉淀 |
+
+### 50-ai-features AI 能力集成
+> 产品功能层面的 AI 能力（不是开发辅助）。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [28-AI智能助手SSE流式对话](50-ai-features/28-AI智能助手SSE流式对话.md) | SSE 流式输出 + 多轮上下文管理 | AI功能 |
+| [29-AI助手RAG知识库](50-ai-features/29-AI助手RAG知识库.md) | RAG 知识库，基于平台真实数据回答 | AI功能 |
+| [30-发帖AI辅助与FunctionCalling查景点](50-ai-features/30-发帖AI辅助与FunctionCalling查景点.md) | AI 辅助创作 + Function Calling | AI功能 |
+| [31-语义搜索向量关键词混合检索](50-ai-features/31-语义搜索向量关键词混合检索.md) | 向量 + 关键词混合检索 | AI功能 |
+
+### 60-data-collection 数据采集自动化
+> Browser MCP + LLM 结构化提取的采集能力。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [32-浏览器自动化采集携程数据](60-data-collection/32-浏览器自动化采集携程数据.md) | 浏览器自动化采集演示 + 思考链展示 | 演示 |
+| [33-景点数据自动采集生成Spec](60-data-collection/33-景点数据自动采集生成Spec.md) | 采集功能 Spec：MCP + LLM 提取 + 双写 | 采集Spec |
+| [34-定时增量采集过期景点数据](60-data-collection/34-定时增量采集过期景点数据.md) | 定时任务 + 过期检测 + 优先级 + 报告 | 定时任务 |
+
+### 70-deploy-ops 部署与运维
+> 选型、配置、部署排错、运维工具。
+
+| 文件 | 说明 | 模式标签 |
+|---|---|---|
+| [26-景点数据导出CSV](70-deploy-ops/26-景点数据导出CSV.md) | curl + node 导出 CSV 运维小工具 | 工具 |
+| [39-上线部署方案选型](70-deploy-ops/39-上线部署方案选型.md) | Docker Compose/K8s/Serverless/PaaS 四方案对比 | 选型 |
+| [40-ECS选型与RDS环境变量配置](70-deploy-ops/40-ECS选型与RDS环境变量配置.md) | ECS 规格选型 + 环境变量多环境配置 | 配置 |
+| [41-ECS部署诊断与排错](70-deploy-ops/41-ECS部署诊断与排错.md) | 部署报错根因分析 + 对症命令 | 排错 |
+
+## 核心提示词模式（跨项目可复用）
+
+| 模式 | 代表文件 | 要点 |
+|---|---|---|
+| ⭐ 只诊断，不改代码 | 9, 35, 37, 38 | 划定 Agent 行为边界，先诊断后修复，防止 AI 一上来就大改 |
+| ⭐ 分步修复、逐个验证 | 23 | 修一个 → 跑测试确认 → 再修下一个，禁止一次性全改，控制爆炸半径 |
+| ⭐ 规则沉淀 | 6, 15, 38 | 把口头约定变成 rules 文件让 Agent 自动遵循，再定期对账检查漂移 |
+| ⭐ 多角色编排 | 24, 27 | product-manager → interaction-agent → opsx:propose 流水线，职责单一 |
+| ⭐ Spec 四要素 | 3, 8, 11 | 模块边界 / WHEN-THEN 场景 / 数据结构 / 可勾选验收标准 |
+| ⭐ 防幻觉核实 | 42 | AI 的观察先核实再行动，"帮我核实别全信" |
