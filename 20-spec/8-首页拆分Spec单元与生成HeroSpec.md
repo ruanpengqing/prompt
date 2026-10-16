@@ -1,7 +1,7 @@
 ```
-我正在开发WanderChina首页。首页包含以下功能区域：
+我正在开发{{项目名称}}首页。首页包含以下功能区域：
 
-1. Hero区：品牌主视觉背景图 + 品牌标语"Discover China Like a Local" + 副标题"Your AI-powered travel companion for exploring China" + 搜索框（placeholder: "Search destinations, tips, or ask AI..."）
+1. Hero区：品牌主视觉背景图 + 品牌标语"{{品牌标语}}" + 副标题"{{品牌副标题}}" + 搜索框（placeholder: "{{搜索框提示文案}}"）
 2. 功能导航栏：三大平台入口卡片——旅游社区（图标+标题+一句话描述）、景点攻略（图标+标题+一句话描述）、AI助手（图标+标题+一句话描述）
 3. 热门目的地推荐：4-6张卡片，每张含封面图+城市名+一句话亮点+热度标签
 4. 社区精选：3-4条UGC帖子摘要（头像+用户名+标题+摘要+点赞数）

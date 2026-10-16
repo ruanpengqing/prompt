@@ -9,7 +9,7 @@
 ```
 
 ```
-基于我的 openspec/specs/ 里的需求描述，帮我设计核心表结构：
+基于我的 {{Spec目录}}/ 里的需求描述，帮我设计核心表结构：
 - users（用户）
 - conversations（对话）
 - messages（消息）
@@ -27,5 +27,5 @@
 - 大表变更怎么处理
 
 然后生成第一个 Migration 文件 V1__init_schema.sql，包含刚才设计的三张表。
-最后把数据库规范补充到 .qoder/rules/backend.md 里。
+最后把数据库规范补充到 {{后端规则文件路径}} 里。
 ```

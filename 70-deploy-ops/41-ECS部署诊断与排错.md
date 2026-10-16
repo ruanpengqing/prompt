@@ -1,6 +1,6 @@
 /opsx:explore
-我要把 WanderChina 部署到阿里云 ECS，用 Docker Compose 编排，
-最终通过 Nginx 反向代理 + HTTPS 让 https://我的域名 能访问。
+我要把 {{项目名称}} 部署到阿里云 ECS，用 Docker Compose 编排，
+最终通过 Nginx 反向代理 + HTTPS 让 https://{{部署域名}} 能访问。
 数据库已经是云 RDS。
 请扫描前后端项目，诊断上线前必须解决的问题，以及需要产出哪些文件。
 
