@@ -15,6 +15,6 @@
    - 创建 {{数据库名称}} 数据库
    - 字符集 utf8mb4
 
-4. 遵循 database-conventions（UUID主键、snake_case表名）
+4. 遵循 {{数据库规则文件}}（UUID主键、snake_case表名）
 ```
 

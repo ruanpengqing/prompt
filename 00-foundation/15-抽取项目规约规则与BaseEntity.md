@@ -17,7 +17,7 @@
    - api-conventions.md（API响应格式、错误码、分页）
 
 2. 数据模型公共字段设计
-   当前{{用户实体类}}用UUID主键 + @PrePersist/@PreUpdate管理时间戳，
-   没有BaseEntity抽象类。后续业务模块（行程、景点等）需要统一的
-   公共字段模式。请分析{{用户实体类}}，提炼可复用的BaseEntity。
+   当前{{现有实体类}}用UUID主键 + @PrePersist/@PreUpdate管理时间戳，
+   没有BaseEntity抽象类。后续业务模块（{{后续业务模块列表}}）需要统一的
+   公共字段模式。请分析{{现有实体类}}，提炼可复用的BaseEntity。
 ```
